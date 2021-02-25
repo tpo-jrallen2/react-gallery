@@ -1,34 +1,17 @@
-import React, { Component } from 'react';
-import SearchBar from './SearchBar';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default class Header extends Component {
-  
-  state = {
-    searchText: '',
-  
-  }
-
-  // dynamically builds quick links from info in this component's state
-  buildQuickLinks() {
-    const qLinks = this.props.links;
-    return (
-      qLinks.map( link => {
-        return <li key={link.id}><NavLink to={link.path}>{link.displayText}</NavLink></li>
-      })
-    )
-  }
-  
-  render() { 
-    return( 
-      <header>
-        <SearchBar />
-        <nav className="main-nav">
-          <ul>
-            {this.buildQuickLinks()}
-          </ul>
-        </nav>        
-      </header>
-    );
-  }
-}
+const Header = () => {
+  return (
+    <header>
+      <nav className='main-nav'>
+        <ul>
+          <li><NavLink to='/stars'>Stars</NavLink></li>
+          <li><NavLink to='/mountains'>Mountains</NavLink></li>
+          <li><NavLink to='/forests'>Forests</NavLink></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+export default Header;
