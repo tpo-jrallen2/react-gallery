@@ -10,15 +10,6 @@ The user can select from preset topics or search for their own.
 
 Base styling provided by Treehouse, however I did alter some colors and backgrounds on the static elements. 
 
-## Available Scripts
+## Flickr API Key Needed
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
+To run this project you will need your own 'config.js' file in the src directory containing your own Flickr API key.
