@@ -32,6 +32,8 @@ class App extends Component {
         }, []);
         return returnedPhotoData;
       })
+      // push the created elements into state 
+      // to be retrieved later by the photo container 
       .then(returnedPhotoData => {
         this.setState(prevState => { 
           let retrievedPhotoData = prevState.retrievedPhotoData;
@@ -42,6 +44,7 @@ class App extends Component {
       .catch( err => console.log(err));
   }
 
+  // load default photos and the static photos 
   componentDidMount() {
     this.getFlickrResults();
     this.getFlickrResults('stars');
